@@ -1,0 +1,11 @@
+# Working / scrape artifacts — do NOT publish
+.claude/
+scratchpad/
+
+# AIA-scraped source & intermediates (kept locally, not published)
+downloads/*
+# ...except the Taipei submission forms the page links to:
+!downloads/2026-AIA-Taipei-AWARDS_Appendix-Forms-A-E.docx
+
+# Internal prep docs (not part of the website)
+/AIA Taipei Design Awards*.docx
