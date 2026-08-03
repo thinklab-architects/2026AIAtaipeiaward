@@ -81,7 +81,7 @@
 
   /* ---------- Hero ---------- */
   /* ---------- Poster (top of page, as on the AIA South Korea page) ---------- */
-  .poster-wrap{background:#111110;padding:44px 24px 0}
+  .poster-wrap{background:#fff;padding:44px 24px 0}
   .poster{
     position:relative;max-width:760px;margin:0 auto;aspect-ratio:1/1.414;
     background:#FCDD5F;overflow:hidden;
@@ -111,21 +111,18 @@
   .poster .p-t4{color:#111;font-weight:700;font-size:2.8cqw;text-align:right;margin-bottom:.6em}
   .poster .p-t5{color:#222;font-weight:400;font-size:2.5cqw;text-align:right;line-height:1.5}
 
-  /* Hero — deadline only, sitting directly under the poster on the same black */
+  /* Hero — deadline only, on white directly under the poster */
   .hero{
-    background:#111110;
-    color:#fff;text-align:center;padding:44px 24px 0;
+    background:#fff;
+    text-align:center;padding:40px 24px 8px;
   }
   .deadline{
     display:inline-flex;align-items:baseline;gap:12px;margin:0;
     background:var(--aia-red);color:#fff;padding:16px 30px;
-    font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:600;letter-spacing:.08em;text-transform:uppercase;
     font-size:clamp(14px,2vw,19px);
   }
   .deadline small{font-size:11px;font-weight:600;letter-spacing:.2em;opacity:.85}
-  .hero .strip{
-    margin-top:44px;background:#fff;height:14px;
-  }
 
   /* ---------- Layout ---------- */
   main{max-width:1180px;margin:0 auto;padding:0 24px}
@@ -152,9 +149,10 @@
   .cat{border:1px solid var(--line);padding:32px 26px;background:var(--bg-soft);position:relative;transition:.18s}
   .cat:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08);background:#fff}
   .cat .name{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--aia-red);font-weight:600;margin-bottom:14px}
-  .cat .val{font-size:30px;font-weight:800;color:var(--ink);line-height:1.15}
+  .cat .val{font-size:30px;font-weight:400;color:var(--ink);line-height:1.15}
   .cat .val span{font-size:15px;font-weight:600;color:var(--stone);display:block;margin-top:6px}
-  .note{margin-top:28px;padding:18px 22px;background:#ffffff;border:1px solid var(--line);border-left:4px solid var(--aia-red);font-weight:600;color:var(--ink);max-width:none}
+  .note{margin-top:28px;padding:18px 22px;background:#ffffff;border:1px solid var(--line);border-left:4px solid var(--aia-red);font-weight:400;color:var(--ink);max-width:none}
+  .note b{font-weight:600}
 
   /* eligibility */
   .elig-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:30px}
@@ -168,10 +166,9 @@
   .date{padding:26px 22px;border-right:1px solid var(--line)}
   .date:last-child{border-right:none}
   .date .d-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:10px}
-  .date .d-val{font-size:18px;font-weight:800;color:var(--ink);line-height:1.3}
-  .date.hl{background:var(--ink);color:#fff}
-  .date.hl .d-label{color:#d9b3b7}
-  .date.hl .d-val{color:#fff}
+  .date .d-val{font-size:18px;font-weight:400;color:var(--ink);line-height:1.3}
+  /* Submission-deadline cell: plain white, no highlight */
+  .date.hl{background:#fff}
   @media(max-width:760px){.dates{grid-template-columns:1fr 1fr}.date:nth-child(2){border-right:none}}
 
   /* submission */
@@ -212,7 +209,7 @@
   .fee-table thead th:not(:first-child),.fee-table td{text-align:center}
   .fee-table tbody th{font-weight:400;font-size:15px;color:var(--graphite);white-space:nowrap}
   .fee-table tbody tr:last-child th,.fee-table tbody tr:last-child td{border-bottom:none}
-  .fee-table .amt{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+  .fee-table .amt{font-size:26px;font-weight:400;color:var(--ink);letter-spacing:-.01em}
   .fee-table .tier-early .amt{color:var(--aia-red-dark)}
   .tier-tag{
     display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -252,17 +249,17 @@
   .appx{border:1px solid var(--line);margin-top:22px;background:#fff}
   .appx summary{
     cursor:pointer;list-style:none;padding:20px 24px;display:flex;align-items:center;gap:16px;
-    font-weight:800;color:var(--ink);letter-spacing:.02em;
+    font-weight:600;color:var(--ink);letter-spacing:.02em;
   }
   .appx summary::-webkit-details-marker{display:none}
   .appx summary .tag{
-    background:var(--ink);color:#fff;font-size:12px;letter-spacing:.14em;padding:6px 12px;font-weight:800;flex:none;
+    background:var(--ink);color:#fff;font-size:12px;letter-spacing:.14em;padding:6px 12px;font-weight:600;flex:none;
   }
-  .appx summary .plus{margin-left:auto;color:var(--aia-red);font-size:22px;font-weight:800;line-height:1}
+  .appx summary .plus{margin-left:auto;color:var(--aia-red);font-size:22px;font-weight:400;line-height:1}
   .appx[open] summary .plus{transform:rotate(45deg)}
   .appx[open] summary{border-bottom:1px solid var(--line);background:var(--bg-soft)}
   .appx .body{padding:24px 28px;font-size:15px}
-  .appx .body h5{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--aia-red);margin:18px 0 8px;font-weight:800}
+  .appx .body h5{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--aia-red);margin:18px 0 8px;font-weight:600}
   .appx .body h5:first-child{margin-top:0}
   .field{color:var(--graphite);padding:6px 0;border-bottom:1px dotted var(--line)}
   .field b{color:var(--ink)}
@@ -393,7 +390,6 @@
   <div class="deadline">
     <small>Submit by</small> Friday · 21 August 2026
   </div>
-  <div class="strip"></div>
 </div>
 
 <main>
@@ -490,7 +486,7 @@
     <div class="req-cols">
       <div>
         <p>For each project, the following submission materials must be uploaded to a web-based file transfer platform (e.g., Dropbox, Google Drive, OneDrive, WeTransfer, etc.) as a ZIP file. Please share the download link via email.</p>
-        <p style="font-weight:700;color:var(--ink);margin-top:18px">The submission ZIP file (100 MB max) should include:</p>
+        <p style="font-weight:600;color:var(--ink);margin-top:18px">The submission ZIP file (100 MB max) should include:</p>
         <ul class="checklist">
           <li>Entry Form (Appendix A)</li>
           <li>Project Description Form (Appendix B)</li>
