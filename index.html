@@ -81,7 +81,7 @@
 
   /* ---------- Hero ---------- */
   /* ---------- Poster (top of page, as on the AIA South Korea page) ---------- */
-  .poster-wrap{background:#fff;padding:38px 24px 10px}
+  .poster-wrap{background:#111110;padding:44px 24px 0}
   .poster{
     position:relative;max-width:760px;margin:0 auto;aspect-ratio:1/1.414;
     background:#FCDD5F;overflow:hidden;
@@ -98,40 +98,33 @@
   .poster .p-logo{position:absolute;top:3.6%;left:5.5%;display:flex;align-items:center;gap:.45em;z-index:2}
   .poster .p-logo .dot{
     width:2.7em;height:2.7em;border-radius:50%;background:#E63348;color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:4.4cqw;letter-spacing:.02em;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:3.6cqw;letter-spacing:.02em;
   }
-  .poster .p-logo .nm{color:#fff;font-weight:700;font-size:5.1cqw;letter-spacing:-.01em}
+  .poster .p-logo .nm{color:#fff;font-weight:700;font-size:4.2cqw;letter-spacing:-.01em}
   .poster .p-text{position:absolute;left:5.5%;right:5.5%;bottom:5.2%;z-index:2}
-  .poster .p-t1{color:#111;font-weight:800;font-size:5.4cqw;letter-spacing:-.01em;margin-bottom:.1em}
-  .poster .p-t2{font-weight:800;font-size:9.6cqw;letter-spacing:-.005em;line-height:1;margin-bottom:.1em;text-align:right}
+  .poster .p-t1{color:#111;font-weight:800;font-size:4.3cqw;letter-spacing:-.01em;margin-bottom:.1em}
+  .poster .p-t2{font-weight:800;font-size:7.7cqw;letter-spacing:-.005em;line-height:1;margin-bottom:.1em;text-align:right}
   .poster .p-t2 i{font-style:normal}
   .poster .p-t2 .o{color:#F4511E}
   .poster .p-t2 .k{color:#FA7EA0}
-  .poster .p-t3{color:#222;font-weight:400;font-size:4.1cqw;text-align:right;margin-bottom:1.5em}
-  .poster .p-t4{color:#111;font-weight:700;font-size:3.4cqw;text-align:right;margin-bottom:.6em}
-  .poster .p-t5{color:#222;font-weight:400;font-size:3.1cqw;text-align:right;line-height:1.5}
+  .poster .p-t3{color:#222;font-weight:400;font-size:3.3cqw;text-align:right;margin-bottom:1.6em}
+  .poster .p-t4{color:#111;font-weight:700;font-size:2.8cqw;text-align:right;margin-bottom:.6em}
+  .poster .p-t5{color:#222;font-weight:400;font-size:2.5cqw;text-align:right;line-height:1.5}
 
+  /* Hero — deadline only, sitting directly under the poster on the same black */
   .hero{
-    background:linear-gradient(180deg,#111110 0%,#232221 100%);
-    color:#fff;text-align:center;padding:64px 24px 0;
+    background:#111110;
+    color:#fff;text-align:center;padding:44px 24px 0;
   }
-  .hero .eyebrow{
-    font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:20px;font-weight:600;
-  }
-  .hero h1{
-    font-size:clamp(28px,5vw,54px);font-weight:600;line-height:1.12;letter-spacing:-.2px;
-    max-width:940px;margin:0 auto 10px;
-  }
-  .hero h1 .sub{display:block;font-size:clamp(15px,2.4vw,22px);font-weight:500;color:#c9c6c6;letter-spacing:.05em;margin-top:14px}
   .deadline{
-    display:inline-flex;align-items:baseline;gap:12px;margin:34px 0 0;
+    display:inline-flex;align-items:baseline;gap:12px;margin:0;
     background:var(--aia-red);color:#fff;padding:16px 30px;
     font-weight:800;letter-spacing:.08em;text-transform:uppercase;
     font-size:clamp(14px,2vw,19px);
   }
   .deadline small{font-size:11px;font-weight:600;letter-spacing:.2em;opacity:.85}
   .hero .strip{
-    margin-top:48px;background:#fff;height:14px;
+    margin-top:44px;background:#fff;height:14px;
   }
 
   /* ---------- Layout ---------- */
@@ -228,6 +221,28 @@
   .tier-tag.alt{background:#272727}
   .tier-tag.plain{background:#8a8579}
   .fee-note{font-size:14px;color:var(--stone);margin-top:14px}
+  /* Timeline rail */
+  .tl-rail{margin:6px 0 30px}
+  .tl-track{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px}
+  .tl-seg{padding:11px 14px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;text-align:center}
+  .tl-seg.s1{background:var(--aia-red-dark)}
+  .tl-seg.s2{background:#272727}
+  .tl-seg.s3{background:#8a8579}
+  .tl-marks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:0}
+  .tl-mark{position:relative;padding-top:16px;padding-left:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--stone);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tl-mark i{position:absolute;top:0;left:0;width:1px;height:10px;background:var(--line-2,#c9c5ba)}
+  /* Matrix table extras */
+  .fee-table thead th .col-sub{display:block;font-size:10px;font-weight:400;letter-spacing:.06em;text-transform:none;color:var(--stone);margin-top:4px}
+  .fee-table td.period{text-align:left;font-size:15px;color:var(--graphite);white-space:nowrap}
+  .fee-table td.period b{color:var(--ink);font-weight:700}
+  .fee-table.matrix tbody th{vertical-align:middle}
+  .fee-table .ms-body .ms-head th{
+    background:#fafafa;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--stone);border-top:2px solid #272727;padding:12px 18px;
+  }
+  .fee-table .ms th{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
+  .fee-table .ms td.period{white-space:normal}
+  @media(max-width:700px){.tl-seg{font-size:10px;letter-spacing:1px;padding:9px 6px}.tl-mark{font-size:10px;letter-spacing:0}}
   @media(max-width:700px){.fee-cats{grid-template-columns:1fr;gap:8px}}
   .pay{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
   @media(max-width:640px){.fees,.cats,.pay{grid-template-columns:1fr}}
@@ -375,10 +390,6 @@
 
 <!-- ================= HERO ================= -->
 <div class="hero">
-  <div class="eyebrow">AIA Taipei · Call for Entries</div>
-  <h1>2026 AIA Taipei Design Awards
-    <span class="sub">Celebrating Architecture Excellence</span>
-  </h1>
   <div class="deadline">
     <small>Submit by</small> Friday · 21 August 2026
   </div>
@@ -511,8 +522,8 @@
 
   <!-- ============ ENTRY FEES ============ -->
   <section class="block" id="fees">
-    <div class="kicker">05 — Entry Fees</div>
-    <h2 class="title">Entry Fees</h2>
+    <div class="kicker">05 — Entry Fees &amp; Timeline</div>
+    <h2 class="title">Fee &amp; Timeline Matrix</h2>
     <p class="lead">The entry fee, per project, is tiered by the date payment is remitted. Enter early to receive the reduced rate.</p>
 
     <div class="fee-cats">
@@ -521,45 +532,62 @@
       <div><b>ILA</b> — International Licensed Architect (non-AIA member)</div>
     </div>
 
+    <!-- Visual timeline rail -->
+    <div class="tl-rail" aria-hidden="true">
+      <div class="tl-track">
+        <div class="tl-seg s1"><span>Phase 1 · Half Price</span></div>
+        <div class="tl-seg s2"><span>Phase 2 · 20% Off</span></div>
+        <div class="tl-seg s3"><span>Phase 3 · Full Price</span></div>
+      </div>
+      <div class="tl-marks">
+        <div class="tl-mark"><i></i>Entries open</div>
+        <div class="tl-mark"><i></i>from 1 Sep 2026</div>
+        <div class="tl-mark"><i></i>from 19 Oct 2026</div>
+      </div>
+    </div>
+
+    <!-- Fee × Timeline matrix -->
     <div class="fee-table-wrap">
-      <table class="fee-table">
-        <caption class="sr-only">Entry fees per project by payment period and entrant category, in USD</caption>
+      <table class="fee-table matrix">
+        <caption class="sr-only">Fee and timeline matrix: entry fees per project by payment phase and entrant category (USD), followed by programme milestones</caption>
         <thead>
           <tr>
-            <th scope="col">Payment Period</th>
-            <th scope="col">ATAM</th>
-            <th scope="col">OA</th>
-            <th scope="col">ILA</th>
+            <th scope="col">Phase</th>
+            <th scope="col">Period</th>
+            <th scope="col">ATAM<span class="col-sub">AIA Taipei Member</span></th>
+            <th scope="col">OA<span class="col-sub">Other AIA Member</span></th>
+            <th scope="col">ILA<span class="col-sub">Int'l Licensed Architect</span></th>
           </tr>
         </thead>
         <tbody>
           <tr class="tier-early">
-            <th scope="row">
-              <span class="tier-tag">Half Price</span>
-              On or before 31 August 2026
-            </th>
+            <th scope="row"><span class="tier-tag">Half Price</span></th>
+            <td class="period">On or before <b>31 Aug 2026</b></td>
             <td><span class="amt">$75</span></td>
             <td><span class="amt">$100</span></td>
             <td><span class="amt">$150</span></td>
           </tr>
           <tr>
-            <th scope="row">
-              <span class="tier-tag alt">20% Off</span>
-              1 September – 18 October 2026
-            </th>
+            <th scope="row"><span class="tier-tag alt">20% Off</span></th>
+            <td class="period"><b>1 Sep – 18 Oct 2026</b></td>
             <td><span class="amt">$120</span></td>
             <td><span class="amt">$160</span></td>
             <td><span class="amt">$240</span></td>
           </tr>
           <tr>
-            <th scope="row">
-              <span class="tier-tag plain">Full Price</span>
-              After 18 October 2026
-            </th>
+            <th scope="row"><span class="tier-tag plain">Full Price</span></th>
+            <td class="period">After <b>18 Oct 2026</b></td>
             <td><span class="amt">$150</span></td>
             <td><span class="amt">$200</span></td>
             <td><span class="amt">$300</span></td>
           </tr>
+        </tbody>
+        <tbody class="ms-body">
+          <tr class="ms-head"><th scope="row" colspan="5">Programme Milestones</th></tr>
+          <tr class="ms"><th scope="row">Submission Deadline</th><td class="period" colspan="4"><b>Friday, 21 August 2026</b> — 10:59 (US Eastern) / 23:59 (Taipei, CST)</td></tr>
+          <tr class="ms"><th scope="row">Jury Deliberation</th><td class="period" colspan="4">September 2026</td></tr>
+          <tr class="ms"><th scope="row">Results Announcement</th><td class="period" colspan="4">October 2026</td></tr>
+          <tr class="ms"><th scope="row">Awards Ceremony</th><td class="period" colspan="4">October 2026 — Taipei</td></tr>
         </tbody>
       </table>
     </div>
