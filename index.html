@@ -198,16 +198,14 @@
   .fee .amt small{font-size:15px;color:var(--stone);font-weight:600}
   /* Tiered entry-fee table */
   .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-  .fee-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 24px}
-  .fee-cats div{border-left:3px solid var(--aia-red);padding:6px 0 6px 14px;font-size:15px;color:var(--graphite)}
-  .fee-cats b{color:var(--ink);letter-spacing:1px}
   .fee-table-wrap{overflow-x:auto;border:1px solid var(--line)}
-  .fee-table{border-collapse:collapse;width:100%;min-width:560px;background:#fff}
+  .fee-table{border-collapse:collapse;width:100%;min-width:680px;background:#fff}
   .fee-table th,.fee-table td{border-bottom:1px solid var(--line);padding:16px 18px;text-align:left}
   .fee-table thead th{
-    font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--ink);
-    background:#fff;border-bottom:2px solid #272727;white-space:nowrap;
+    font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink);
+    background:#fff;border-bottom:2px solid #272727;line-height:1.35;vertical-align:bottom;
   }
+  .fee-table thead th:first-child,.fee-table thead th:nth-child(2){white-space:nowrap}
   .fee-table thead th:not(:first-child),.fee-table td{text-align:center}
   .fee-table tbody th{font-weight:400;font-size:15px;color:var(--graphite);white-space:nowrap}
   .fee-table tbody tr:last-child th,.fee-table tbody tr:last-child td{border-bottom:none}
@@ -438,9 +436,9 @@
       <div>
         <h4 style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--aia-red);margin-bottom:10px">Who may enter</h4>
         <ul class="card-list">
-          <li>AIA Taipei Architect Members (ATAM) in good standing</li>
-          <li>Other AIA Members (OA) in good standing — membership active at time of submission</li>
-          <li>International Licensed Architects (ILA) — licensed, non-AIA members</li>
+          <li>AIA Taipei Architect Members in good standing</li>
+          <li>Other AIA Members in good standing — membership active at time of submission</li>
+          <li>International Licensed Architects — licensed, non-AIA members</li>
           <li>The entrant must be the primary author of the design submitted</li>
         </ul>
       </div>
@@ -521,14 +519,8 @@
   <!-- ============ ENTRY FEES ============ -->
   <section class="block" id="fees">
     <div class="kicker">05 — Entry Fees &amp; Timeline</div>
-    <h2 class="title">Fee &amp; Timeline Matrix</h2>
+    <h2 class="title">Fee &amp; Timeline</h2>
     <p class="lead">The entry fee, per project, is tiered by the date payment is remitted. Enter early to receive the reduced rate.</p>
-
-    <div class="fee-cats">
-      <div><b>ATAM</b> — AIA Taipei Architect Member</div>
-      <div><b>OA</b> — Other AIA Member</div>
-      <div><b>ILA</b> — International Licensed Architect (non-AIA member)</div>
-    </div>
 
     <!-- Visual timeline rail -->
     <div class="tl-rail" aria-hidden="true">
@@ -552,9 +544,9 @@
           <tr>
             <th scope="col">Phase</th>
             <th scope="col">Period</th>
-            <th scope="col">ATAM<span class="col-sub">AIA Taipei Member</span></th>
-            <th scope="col">OA<span class="col-sub">Other AIA Member</span></th>
-            <th scope="col">ILA<span class="col-sub">Int'l Licensed Architect</span></th>
+            <th scope="col">AIA Taipei Architect Member</th>
+            <th scope="col">Other AIA Member</th>
+            <th scope="col">International Licensed Architect<span class="col-sub">non-AIA member</span></th>
           </tr>
         </thead>
         <tbody>
@@ -633,7 +625,7 @@
         <div class="field"><b>Firm Name</b> · <b>Entrant's Role in Project</b></div>
         <div class="field"><b>Contact Person</b> · <b>Mailing Address</b> · <b>Phone</b> · <b>Email</b></div>
         <h5>Eligibility Category</h5>
-        <div class="checkline"><span>☐ AIA Taipei Architect Member (ATAM)</span><span>☐ Other AIA Member (OA)</span><span>☐ International Licensed Architect (ILA)</span></div>
+        <div class="checkline"><span>☐ AIA Taipei Architect Member</span><span>☐ Other AIA Member</span><span>☐ International Licensed Architect</span></div>
         <h5>Project Team &amp; Credits <span class="hint" style="text-transform:none;letter-spacing:0;color:var(--stone)">(for acknowledgment of winning entry)</span></h5>
         <div class="field"><b>Design Team Members</b> · <b>Associate Architect</b> · <b>Consultants</b> · <b>Contractor / Builder</b> · <b>Owner / Client</b> · <b>Photographer(s)</b></div>
         <div class="legal">Entrant's Affirmation: I hereby affirm that all information provided above is accurate and truthful to the best of my knowledge. I certify that I have been responsible as the primary author of the design submitted herewith, and I meet the eligibility requirements of the 2026 AIA Taipei Design Awards. I have obtained all necessary permissions for this submission and agree to abide by all rules and terms of the awards program.</div>
