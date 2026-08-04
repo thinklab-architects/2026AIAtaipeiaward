@@ -10,6 +10,9 @@ downloads/*
 # Internal prep docs (not part of the website)
 /AIA Taipei Design Awards*.docx
 
+# Banking source documents — never publish
+*帳戶掃描*.pdf
+
 # Windows / OS junk
 Thumbs.db
 ehthumbs.db

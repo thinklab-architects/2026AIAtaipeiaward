@@ -241,9 +241,14 @@
   .fee-table .ms td.period{white-space:normal}
   @media(max-width:700px){.tl-seg{font-size:10px;letter-spacing:1px;padding:9px 6px}.tl-mark{font-size:10px;letter-spacing:0}}
   @media(max-width:700px){.fee-cats{grid-template-columns:1fr;gap:8px}}
-  .pay{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+  .pay{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
   @media(max-width:640px){.fees,.cats,.pay{grid-template-columns:1fr}}
   .pay .callbox strong{color:var(--ink)}
+  .bank{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 24px;align-items:center;margin-top:20px}
+  .bank dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:700}
+  .bank dd{margin:0}
+  .bank dd .mono{margin:0}
+  @media(max-width:640px){.bank{grid-template-columns:1fr;gap:2px}.bank dt{margin-top:12px}}
 
   /* forms / appendices */
   .appx{border:1px solid var(--line);margin-top:22px;background:#fff}
@@ -585,12 +590,18 @@
 
     <div class="pay">
       <div class="callbox">
-        <h4>Payment Method — Credit Card</h4>
-        <p style="margin:0"><strong>Eventbrite</strong> — pay online by credit card via the official Eventbrite listing.</p>
-      </div>
-      <div class="callbox">
-        <h4>Payment Method — Bank Transfer</h4>
-        <p style="margin:0">Transfer to the <strong>AIA International</strong> bank account. Please use payment reference <b>'AIATP Awards'</b>.</p>
+        <h4>Payment Method — Bank Transfer Only</h4>
+        <p style="margin:0">Entry fees are payable by <strong>bank transfer</strong>. Please quote the payment reference <b>'AIATP Awards'</b> and keep the remittance receipt — it is required as your Proof of Entry Fee Payment (Appendix D).</p>
+        <dl class="bank">
+          <dt>Bank</dt><dd><strong>Land Bank of Taiwan</strong> 臺灣土地銀行</dd>
+          <dt>Branch</dt><dd><strong>Ren-Ai Branch</strong> 仁愛分行</dd>
+          <dt>Bank Code</dt><dd><span class="mono">0050577</span></dd>
+          <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
+          <dt>Account No.</dt><dd><span class="mono">057001080867</span></dd>
+        </dl>
+        <p style="font-size:13.5px;color:var(--stone);margin-top:16px">
+          Fees are quoted in USD. All remitting and intermediary bank charges are borne by the entrant — please ensure the full fee amount is received.
+        </p>
       </div>
     </div>
     <a class="totop" href="#top">↑ Return to top</a>
