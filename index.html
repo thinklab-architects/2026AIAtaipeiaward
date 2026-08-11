@@ -28,8 +28,6 @@
     --line:#e2e0e0;
     --bg:#ffffff;
     --bg-soft:#ffffff;
-    --bg-dark:#1f1f1f;            /* footer */
-    --header-bg:#212121;          /* header */
     /* Site font stacks, matching aiainternational.org exactly */
     /* Identical to aiainternational.org's stack (Hanken Grotesk only as an offline stand-in) */
     --sans:"proxima-nova","Hanken Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -50,34 +48,7 @@
   a:hover{text-decoration:underline}
   img{max-width:100%;display:block}
 
-  /* ---------- Header ---------- */
   [id]{scroll-margin-top:20px}
-  /* Header — mirrors aiainternational.org: solid #212121, centred logo, uppercase nav */
-  header.site{
-    position:relative;z-index:100;background-color:var(--header-bg);
-  }
-  .bar{
-    max-width:1400px;margin:0 auto;padding:22px 40px 10px;
-    display:flex;flex-direction:column;align-items:center;gap:14px;
-  }
-  .brand{display:flex;align-items:center;gap:16px;min-width:0}
-  .brand img{height:50px;width:auto}
-  .brand .sec{
-    font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600;
-    color:rgba(255,255,255,.9);border-left:1px solid rgba(255,255,255,.28);padding-left:16px;white-space:nowrap;
-  }
-  nav.top{display:flex;align-items:center;justify-content:center;width:100%}
-  nav.top ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:center;padding-bottom:10px}
-  nav.top a{
-    color:rgba(255,255,255,.9);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600;
-  }
-  nav.top a:hover{color:var(--aia-red);text-decoration:none}
-  .nav-cta{
-    border:1.5px solid rgba(255,255,255,.85);border-radius:999px;padding:8px 20px;color:#fff;
-    font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:.15s;
-  }
-  .nav-cta:hover{background:#fff;color:#212121;text-decoration:none}
-  .menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;padding:8px 12px;font-size:13px;letter-spacing:2px;cursor:pointer}
 
   /* ---------- Hero ---------- */
   /* ---------- Poster (top of page, as on the AIA South Korea page) ---------- */
@@ -281,90 +252,9 @@
     font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--stone);
   }
 
-  /* footer */
-  /* Footer — mirrors aiainternational.org exactly (#1f1f1f, uppercase 13px links) */
-  footer.site{background:var(--bg-dark);color:#fff;padding:60px 24px 34px}
-  .foot{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
-  footer h4{color:rgba(255,255,255,.4);font-size:16px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-  footer h4 a{color:inherit}
-  footer h4 a:hover{color:rgba(255,255,255,.7);text-decoration:none}
-  footer ul{list-style:none}
-  footer ul li{margin-bottom:11px}
-  footer ul li a{color:#fff;font-size:13px;font-weight:400;letter-spacing:2px;text-transform:uppercase}
-  footer ul li a:hover{color:var(--aia-red);text-decoration:none}
-  .foot-bottom{max-width:1180px;margin:44px auto 0;padding-top:22px;border-top:1px solid #3a3838;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  @media(max-width:860px){.foot{grid-template-columns:1fr 1fr}}
-  @media(max-width:760px){.foot{grid-template-columns:1fr}.menu-btn{display:block}nav.top{display:none}nav.top.open{display:block;width:100%}nav.top ul{flex-direction:column;gap:14px;padding-top:14px}}
 </style>
 </head>
 <body>
-
-<!-- ================= PLACEHOLDER WATERMARK ================= -->
-<style>
-  /* Tiled diagonal "PLACEHOLDER" watermark across the whole page */
-  .wm-overlay{
-    position:fixed;inset:0;z-index:9998;pointer-events:none;
-    background-repeat:repeat;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='240'><text x='50%25' y='50%25' fill='rgba(239,48,49,0.10)' font-family='Arial, sans-serif' font-size='40' font-weight='700' letter-spacing='6' text-anchor='middle' transform='rotate(-30 210 120)'>PLACEHOLDER</text></svg>");
-  }
-  /* Fixed corner ribbon so it is unmistakable even in screenshots/crops */
-  .wm-ribbon{
-    position:fixed;z-index:9999;pointer-events:none;
-    top:26px;left:-58px;transform:rotate(-45deg);
-    background:#EF3031;color:#fff;
-    font-family:"proxima-nova","Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-    font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-    padding:7px 70px;box-shadow:0 2px 10px rgba(0,0,0,.3);
-  }
-  /* Dismissable top strip stating clearly this is not the official page */
-  .wm-bar{
-    position:fixed;left:0;right:0;bottom:0;z-index:9999;
-    background:#111110;color:#fff;
-    border-top:2px solid #EF3031;
-    font-family:"proxima-nova","Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
-    font-size:12.5px;letter-spacing:.06em;
-    display:flex;align-items:center;justify-content:center;gap:14px;
-    padding:10px 16px;text-align:center;
-  }
-  .wm-bar b{color:#EF3031;text-transform:uppercase;letter-spacing:.14em}
-  .wm-bar button{
-    pointer-events:auto;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;
-    font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;cursor:pointer;
-  }
-  .wm-bar button:hover{background:#fff;color:#111110}
-  @media print{.wm-overlay,.wm-ribbon,.wm-bar{display:block!important}}
-</style>
-<div class="wm-overlay" aria-hidden="true"></div>
-<div class="wm-ribbon" aria-hidden="true">Placeholder</div>
-<div class="wm-bar" role="note">
-  <span><b>Placeholder / Draft</b> — Unofficial mock-up, not the official AIA Taipei Design Awards page. Content, dates &amp; fees are illustrative only.</span>
-  <button onclick="this.parentElement.style.display='none'">Dismiss</button>
-</div>
-
-<!-- ================= HEADER (mirrors aiainternational.org) ================= -->
-<header class="site">
-  <div class="bar">
-    <div class="brand">
-      <img src="assets/logo_red_white.png" alt="AIA International">
-      <span class="sec">Taipei Section</span>
-    </div>
-    <button class="menu-btn" onclick="document.querySelector('nav.top').classList.toggle('open')">MENU</button>
-    <nav class="top">
-      <ul>
-        <li><a href="https://www.aiainternational.org/">Home</a></li>
-        <li><a href="https://www.aiainternational.org/news">News</a></li>
-        <li><a href="https://www.aiainternational.org/about">About Us</a></li>
-        <li><a href="https://www.aiainternational.org/events">Upcoming Events</a></li>
-        <li><a href="https://www.aiainternational.org/design-awards">Design Awards</a></li>
-        <li><a href="https://www.aiainternational.org/useful-links">Resources</a></li>
-        <li><a href="https://www.aiainternational.org/sponsorship">Sponsorship</a></li>
-        <li><a href="https://www.aiainternational.org/join">Join</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="nav-cta" href="#requirements">Enter Now</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
 <!-- ================= POSTER ================= -->
 <div class="poster-wrap" id="top">
@@ -751,49 +641,6 @@
   </section>
 
 </main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site" id="footer">
-  <div class="foot">
-    <div>
-      <h4>AIA International Chapters</h4>
-      <ul>
-        <li><a href="http://www.aiauk.org/">AIA United Kingdom</a></li>
-        <li><a href="http://www.aiaeurope.org/">AIA Continental Europe</a></li>
-        <li><a href="http://www.aiahk.org/">AIA Hong Kong</a></li>
-        <li><a href="https://www.aiajapan.org/">AIA Japan</a></li>
-        <li><a href="http://www.aiamiddleeast.org/">AIA Middle East</a></li>
-        <li><a href="https://www.aiarchitectsh.org/">AIA Shanghai</a></li>
-        <li><a href="https://aiacanadasociety.org/">AIA Canada Society</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4><a href="https://www.aiainternational.org/sections">AIA International Sections</a></h4>
-      <ul>
-        <li><a href="https://aiataipei.org/">AIA Taipei</a></li>
-        <li><a href="https://www.aiainternational.org/sections">AIA South Korea</a></li>
-        <li><a href="https://www.aiasoutheastasia.org/">AIA Southeast Asia</a></li>
-        <li><a href="https://www.aiainternational.org/sections">AIA Latin America</a></li>
-        <li><a href="https://www.aiainternational.org/sections">AIA Sub-Saharan Africa</a></li>
-        <li><a href="https://www.aiainternational.org/sections">AIA Oceania</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Information</h4>
-      <ul>
-        <li><a href="https://www.aiainternational.org/bylaws-and-policies">Bylaws and Policies</a></li>
-        <li><a href="https://www.aiainternational.org/join">Join AIA International</a></li>
-        <li><a href="https://www.aiainternational.org/sponsorship">Sponsorship</a></li>
-        <li><a href="mailto:aiataipeiaward@gmail.com">Contact the Awards Team</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <span>© 2026 AIA International · Taipei Section — 2026 AIA Taipei Design Awards</span>
-    <span>aiataipeiaward@gmail.com</span>
-  </div>
-</footer>
-
 
 </body>
 </html>
