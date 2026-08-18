@@ -18,3 +18,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
+
+# Build artefact for IT handover (regenerated, not tracked)
+*.zip
