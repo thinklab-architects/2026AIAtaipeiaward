@@ -21,3 +21,6 @@ Desktop.ini
 
 # Build artefact for IT handover (regenerated, not tracked)
 *.zip
+
+# 印刷用原稿（600dpi，2MB）— 不隨網站發布
+poster-print-master-*.jpg

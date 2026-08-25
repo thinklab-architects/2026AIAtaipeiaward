@@ -55,34 +55,7 @@
   /* ---------- Poster (top of page) ---------- */
   /* Poster sits in the same centred column as the body copy, edge-for-edge */
   .poster-wrap{background:#fff;max-width:1008px;margin:0 auto;padding:44px 24px 0}
-  .poster{
-    position:relative;width:100%;margin:0 auto;aspect-ratio:1/1.414;
-    background:#FCDD5F;overflow:hidden;
-    font-family:var(--sans);
-    container-type:inline-size;   /* all poster type scales with the poster, not the viewport */
-  }
-  .poster img.poster-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  /* CSS reproduction (used until a poster JPG is dropped in) */
-  .poster .p26{
-    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-    font-size:132cqw;line-height:.74;font-weight:800;color:#fff;letter-spacing:-.045em;
-    white-space:nowrap;user-select:none;
-  }
-  .poster .p-logo{position:absolute;top:3.6%;left:5.5%;display:flex;align-items:center;gap:.45em;z-index:2}
-  .poster .p-logo .dot{
-    width:2.7em;height:2.7em;border-radius:50%;background:#E63348;color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:3.6cqw;letter-spacing:.02em;
-  }
-  .poster .p-logo .nm{color:#fff;font-weight:700;font-size:4.2cqw;letter-spacing:-.01em}
-  .poster .p-text{position:absolute;left:5.5%;right:5.5%;bottom:5.2%;z-index:2}
-  .poster .p-t1{color:#111;font-weight:800;font-size:4.3cqw;letter-spacing:-.01em;margin-bottom:.1em}
-  .poster .p-t2{font-weight:800;font-size:7.7cqw;letter-spacing:-.005em;line-height:1;margin-bottom:.1em;text-align:right}
-  .poster .p-t2 i{font-style:normal}
-  .poster .p-t2 .o{color:#F4511E}
-  .poster .p-t2 .k{color:#FA7EA0}
-  .poster .p-t3{color:#222;font-weight:400;font-size:3.3cqw;text-align:right;margin-bottom:1.6em}
-  .poster .p-t4{color:#111;font-weight:700;font-size:2.8cqw;text-align:right;margin-bottom:.6em}
-  .poster .p-t5{color:#222;font-weight:400;font-size:2.5cqw;text-align:right;line-height:1.5}
+  .poster-wrap .poster-img{width:100%;height:auto;display:block}
 
   /* Hero — deadline only, on white directly under the poster */
   .hero{
@@ -252,25 +225,8 @@
 
 <!-- ================= POSTER ================= -->
 <div class="poster-wrap" id="top">
-  <!-- To use the original artwork instead of this CSS reproduction, save it as
-       assets/poster.jpg and replace this whole .poster block with:
-       <img class="poster-img" src="assets/poster.jpg" alt="2026 AIA Taipei Design Awards — Call for Entries"> -->
-  <div class="poster" role="img" aria-label="2026 AIA Taipei Design Awards — Call for Entries. Inaugural AIA Taipei Design Awards. Submission due 31 October 2026.">
-    <div class="p26" aria-hidden="true">26</div>
-    <div class="p-logo" aria-hidden="true">
-      <span class="dot">AIA</span><span class="nm">Taipei</span>
-    </div>
-    <div class="p-text">
-      <div class="p-t1">2026 AIA Taipei Design Awards</div>
-      <div class="p-t2"><i class="o">C</i><i class="k">A</i><i class="o">L</i><i class="o">L</i> <i class="k">F</i><i class="o">O</i><i class="k">R</i> <i class="o">E</i><i class="k">N</i><i class="o">T</i><i class="k">R</i><i class="o">I</i><i class="k">E</i><i class="o">S</i></div>
-      <div class="p-t3">Celebrating Architecture Excellence</div>
-      <div class="p-t4">Inaugural AIA Taipei Design Awards</div>
-      <div class="p-t5">
-        Submission due: 31, Oct, 2026<br>
-        More information: aiataipeiaward@gmail.com
-      </div>
-    </div>
-  </div>
+  <img class="poster-img" src="assets/poster.jpg" width="1920" height="2718"
+       alt="2026 AIA Taipei Design Awards — Call for Entries. Celebrating Architecture Excellence. Inaugural AIA Taipei Design Awards. Submission due 31 October 2026. More information: aiataipeiaward@gmail.com">
 </div>
 
 <!-- ================= HERO ================= -->
