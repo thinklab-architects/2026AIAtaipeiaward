@@ -131,3 +131,25 @@ but the page remains readable.
 Headings run in order, the fee table uses proper `<th scope>` and a caption,
 the poster carries a text alternative, and colour contrast meets WCAG AA.
 Please keep these intact when editing.
+
+---
+
+## 8. The demo notice 展示版提示
+
+The preview build shows a **"this is a demonstration page"** dialog on load,
+plus a small bar along the bottom once it is dismissed.
+
+**It disables itself on any real domain.** The script only runs when the
+hostname is `*.github.io`, `localhost` or `127.0.0.1`, so once this page is
+deployed to the live site the notice never appears — no edit required.
+
+To strip it out completely, delete the two blocks marked `DEMO NOTICE`: the
+`<style>` + markup just after `<body>`, and the `<script>` just before
+`</body>`. Nothing else depends on them.
+
+展示版在開啟時會彈出「本頁為展示版本」對話框，關閉後底部保留一條提示。
+
+**部署到正式網域時會自動停用** —— 該腳本僅在 `*.github.io`、`localhost`、
+`127.0.0.1` 執行，正式站不會出現，無需修改。若要完全移除，刪除標示為
+`DEMO NOTICE` 的兩個區塊（`<body>` 後的 `<style>` 與標記、`</body>` 前的
+`<script>`）即可，其餘功能不受影響。

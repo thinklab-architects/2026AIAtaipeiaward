@@ -223,6 +223,63 @@
 </head>
 <body>
 
+<!-- ============================================================
+     DEMO NOTICE — shown only on the github.io preview site.
+     It disables itself automatically on any other domain, so it
+     will NOT appear once this page is deployed to the real site.
+     To remove it entirely, delete this block and the matching
+     <script> at the end of <body>.
+     ============================================================ -->
+<style>
+  .demo-modal[hidden]{display:none}
+  .demo-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px}
+  .demo-backdrop{position:absolute;inset:0;background:rgba(17,17,16,.72)}
+  .demo-card{
+    position:relative;z-index:2;background:#fff;width:100%;max-width:520px;
+    border-top:5px solid var(--aia-red);box-shadow:0 30px 80px rgba(0,0,0,.45);
+    padding:40px 42px 34px;text-align:center;
+  }
+  .demo-tag{
+    display:inline-block;background:var(--aia-red);color:#fff;font-size:12px;font-weight:700;
+    letter-spacing:3px;text-transform:uppercase;padding:7px 16px;margin-bottom:22px;
+  }
+  .demo-card h2{
+    font-family:var(--sans);font-size:21px;font-weight:400;color:#272727;
+    letter-spacing:2px;text-transform:uppercase;line-height:1.3;margin-bottom:18px;
+  }
+  .demo-card p{font-size:15px;color:var(--graphite);margin-bottom:12px;text-align:left}
+  .demo-card p.cjk{font-size:14.5px;color:var(--stone)}
+  .demo-ok{
+    margin-top:26px;background:#272727;color:#fff;border:1.5px solid #272727;
+    padding:15px 40px;font-family:var(--sans);font-size:14px;font-weight:600;
+    letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.15s;
+  }
+  .demo-ok:hover{background:var(--aia-red);border-color:var(--aia-red)}
+  .demo-ok:focus-visible{outline:3px solid var(--aia-red);outline-offset:3px}
+  /* persistent reminder once the dialog is dismissed */
+  .demo-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:9998;background:#111110;color:#fff;
+    border-top:3px solid var(--aia-red);font-family:var(--sans);font-size:12.5px;
+    letter-spacing:.05em;text-align:center;padding:9px 16px;
+  }
+  .demo-bar b{color:var(--aia-red);text-transform:uppercase;letter-spacing:.14em}
+  body.demo-open{overflow:hidden}
+  @media(max-width:600px){.demo-card{padding:32px 24px 28px}.demo-card h2{font-size:18px}}
+</style>
+
+<div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle" hidden>
+  <div class="demo-backdrop"></div>
+  <div class="demo-card">
+    <span class="demo-tag">Demo</span>
+    <h2 id="demoTitle">This is a demonstration page</h2>
+    <p>You are viewing a <b>preview build</b> of the 2026 AIA Taipei Design Awards call for entries. It is published here for review only, and is <b>not</b> the official AIA Taipei page.</p>
+    <p>Dates, fees and other details are provisional and may change before the programme is announced.</p>
+    <p class="cjk">本頁為 2026 AIA Taipei Design Awards 徵件頁的<b>展示版本</b>，僅供內部審閱，<b>並非</b>官方正式頁面。日期、費用等內容為暫定，正式公告前可能異動。</p>
+    <button type="button" class="demo-ok" id="demoOk">Continue · 繼續瀏覽</button>
+  </div>
+</div>
+<div class="demo-bar" id="demoBar" hidden><b>Demo</b> — preview build, not the official AIA Taipei page　·　展示版本，非官方頁面</div>
+
 <!-- ================= POSTER ================= -->
 <div class="poster-wrap" id="top">
   <img class="poster-img" src="assets/poster.jpg" width="1920" height="2718"
@@ -584,5 +641,48 @@
 
 </main>
 
+<!-- DEMO NOTICE — see the matching block at the top of <body>. Safe to delete both. -->
+<script>
+(function(){
+  /* Only announce "demo" on the preview host. On any other domain this does
+     nothing at all, so the deployed page is unaffected. */
+  var PREVIEW = /(^|\.)github\.io$/i.test(location.hostname) ||
+                location.hostname === 'localhost' ||
+                location.hostname === '127.0.0.1';
+  if(!PREVIEW) return;
+
+  var modal=document.getElementById('demoModal'),
+      bar=document.getElementById('demoBar'),
+      ok=document.getElementById('demoOk'),
+      bg=null, lastFocus=null;
+
+  function setBackground(inert){
+    if(!bg) bg=[].slice.call(document.querySelectorAll('.poster-wrap, main'));
+    bg.forEach(function(el){
+      if(inert){ el.setAttribute('inert',''); el.setAttribute('aria-hidden','true'); }
+      else { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); }
+    });
+  }
+  function onKey(e){
+    if(e.key==='Escape'){ close(); return; }
+    if(e.key==='Tab'){ e.preventDefault(); ok.focus(); }   /* single control: keep focus inside */
+  }
+  function close(){
+    modal.hidden=true; bar.hidden=false;
+    document.body.classList.remove('demo-open');
+    setBackground(false);
+    document.removeEventListener('keydown', onKey);
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  lastFocus=document.activeElement;
+  modal.hidden=false;
+  document.body.classList.add('demo-open');
+  setBackground(true);
+  document.addEventListener('keydown', onKey);
+  setTimeout(function(){ ok.focus(); }, 60);
+  ok.addEventListener('click', close);
+  modal.querySelector('.demo-backdrop').addEventListener('click', close);
+})();
+</script>
 </body>
 </html>
