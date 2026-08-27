@@ -182,6 +182,13 @@
   .pay{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
   @media(max-width:640px){.cats,.pay{grid-template-columns:1fr}}
   .pay .callbox strong{color:var(--ink)}
+  .acct{border:1px solid var(--line);padding:24px 26px;margin-top:22px}
+  .acct-head{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .acct-head .cur{background:#272727;color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 12px}
+  .acct-head .cur.twd{background:var(--aia-red-dark)}
+  .acct-note{font-size:13.5px;color:var(--stone);margin:16px 0 0}
+  .acct-warn{margin-top:22px;padding:16px 20px;border-left:4px solid var(--aia-red);background:#fff;border:1px solid var(--line);border-left:4px solid var(--aia-red);font-size:14px;color:var(--ink)}
+  .acct-warn .cjk{color:var(--stone);font-size:13.5px}
   .bank{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 24px;align-items:center;margin-top:20px}
   .bank dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);font-weight:700}
   .bank dd{margin:0}
@@ -483,17 +490,32 @@
     <div class="pay">
       <div class="callbox">
         <h3>Payment Method — Bank Transfer Only</h3>
-        <p style="margin:0">Entry fees are payable by <strong>bank transfer</strong>. Please quote the payment reference <b>'AIATP Awards'</b> and keep the remittance receipt — it is required as your Proof of Entry Fee Payment (listed on the Submission Checklist, Appendix D).</p>
-        <dl class="bank">
-          <dt>SWIFT / BIC</dt><dd><span class="mono">LBOTTWTP057</span></dd>
-          <dt>Bank</dt><dd><strong>Land Bank of Taiwan</strong> 臺灣土地銀行</dd>
-          <dt>Branch</dt><dd><strong>Jenai Branch</strong> 仁愛分行</dd>
-          <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
-          <dt>Account No.</dt><dd><span class="mono">057101018018</span></dd>
-        </dl>
-        <p style="font-size:13.5px;color:var(--stone);margin-top:16px">
-          This is a foreign-currency account; fees are quoted and received in USD. All remitting and intermediary bank charges are borne by the entrant — please ensure the full fee amount is received.
-        </p>
+        <p style="margin:0">Entry fees are payable by <strong>bank transfer</strong>. Two accounts are held at the same branch — <strong>use the one that matches the currency you are sending</strong>. Please quote the payment reference <b>'AIATP Awards'</b> and keep the remittance receipt: it is required as your Proof of Entry Fee Payment (listed on the Submission Checklist, Appendix D).</p>
+
+        <div class="acct">
+          <div class="acct-head"><span class="cur">USD</span> From outside Taiwan · 海外匯款（美金）</div>
+          <dl class="bank">
+            <dt>SWIFT / BIC</dt><dd><span class="mono">LBOTTWTP057</span></dd>
+            <dt>Bank</dt><dd><strong>Land Bank of Taiwan</strong> 臺灣土地銀行</dd>
+            <dt>Branch</dt><dd><strong>Jenai Branch</strong> 仁愛分行</dd>
+            <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
+            <dt>Account No.</dt><dd><span class="mono">057101018018</span></dd>
+          </dl>
+          <p class="acct-note">Foreign-currency account. Fees are quoted and received in <b>USD</b>. All remitting and intermediary bank charges are borne by the entrant — please ensure the full fee amount is received.</p>
+        </div>
+
+        <div class="acct">
+          <div class="acct-head"><span class="cur twd">TWD</span> Within Taiwan · 國內匯款（新台幣）</div>
+          <dl class="bank">
+            <dt>Bank Code</dt><dd><span class="mono">005</span> <span style="color:var(--stone);font-size:13px">Land Bank of Taiwan 臺灣土地銀行</span></dd>
+            <dt>Branch</dt><dd><strong>Jenai Branch</strong> 仁愛分行</dd>
+            <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
+            <dt>Account No.</dt><dd><span class="mono">057001080867</span></dd>
+          </dl>
+          <p class="acct-note">New Taiwan Dollar account, for domestic transfers only. Please email <a href="mailto:aiataipeiaward@gmail.com">aiataipeiaward@gmail.com</a> to confirm the NT$ amount before remitting, as the fees above are set in USD.</p>
+        </div>
+
+        <p class="acct-warn"><b>Note</b> — the two accounts are not interchangeable. New Taiwan Dollars cannot be remitted to the foreign-currency (USD) account, and USD wires cannot be sent to the NT$ account.<br><span class="cjk">請注意：兩個帳號不可互用。新台幣無法匯入外幣（美金）帳戶，美金電匯亦無法匯入新台幣帳戶。</span></p>
       </div>
     </div>
   </section>
