@@ -148,7 +148,8 @@
   .fee-table thead th:not(:first-child),.fee-table td{text-align:center}
   .fee-table tbody th{font-weight:400;font-size:15px;color:var(--graphite);white-space:nowrap}
   .fee-table tbody tr:last-child th,.fee-table tbody tr:last-child td{border-bottom:none}
-  .fee-table .amt{font-size:26px;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+  .fee-table .amt{font-size:26px;font-weight:400;color:var(--ink);letter-spacing:-.01em;display:block}
+  .fee-table .amt-twd{display:block;font-size:13px;color:var(--stone);margin-top:2px;white-space:nowrap}
   .fee-table .tier-early .amt{color:var(--aia-red-dark)}
   .tier-tag{
     display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -447,7 +448,7 @@
     <!-- Fee × Timeline matrix -->
     <div class="fee-table-wrap">
       <table class="fee-table matrix">
-        <caption class="sr-only">Fee and timeline matrix: entry fees per project by payment phase and entrant category (USD), followed by program milestones</caption>
+        <caption class="sr-only">Fee and timeline matrix: entry fees per project by payment phase and entrant category, in USD and New Taiwan Dollars, followed by program milestones</caption>
         <thead>
           <tr>
             <th scope="col">Phase</th>
@@ -461,23 +462,23 @@
           <tr class="tier-early">
             <th scope="row"><span class="tier-tag">Half Price</span></th>
             <td class="period">On or before <b>13 Sep 2026</b></td>
-            <td><span class="amt">$75</span></td>
-            <td><span class="amt">$100</span></td>
-            <td><span class="amt">$150</span></td>
+            <td><span class="amt">$75</span><span class="amt-twd">NT$2,400</span></td>
+            <td><span class="amt">$100</span><span class="amt-twd">NT$3,200</span></td>
+            <td><span class="amt">$150</span><span class="amt-twd">NT$4,800</span></td>
           </tr>
           <tr>
             <th scope="row"><span class="tier-tag alt">20% Off</span></th>
             <td class="period"><b>14 Sep – 18 Oct 2026</b></td>
-            <td><span class="amt">$120</span></td>
-            <td><span class="amt">$160</span></td>
-            <td><span class="amt">$240</span></td>
+            <td><span class="amt">$120</span><span class="amt-twd">NT$3,840</span></td>
+            <td><span class="amt">$160</span><span class="amt-twd">NT$5,120</span></td>
+            <td><span class="amt">$240</span><span class="amt-twd">NT$7,680</span></td>
           </tr>
           <tr>
             <th scope="row"><span class="tier-tag plain">Full Price</span></th>
             <td class="period"><b>19 Oct – 31 Oct 2026</b></td>
-            <td><span class="amt">$150</span></td>
-            <td><span class="amt">$200</span></td>
-            <td><span class="amt">$300</span></td>
+            <td><span class="amt">$150</span><span class="amt-twd">NT$4,800</span></td>
+            <td><span class="amt">$200</span><span class="amt-twd">NT$6,400</span></td>
+            <td><span class="amt">$300</span><span class="amt-twd">NT$9,600</span></td>
           </tr>
         </tbody>
         <tbody class="ms-body">
@@ -489,7 +490,7 @@
         </tbody>
       </table>
     </div>
-    <p class="fee-note">All fees are in USD, per project. Individuals may submit multiple entries; a separate fee applies to each project.</p>
+    <p class="fee-note">Fees are per project. Individuals may submit multiple entries; a separate fee applies to each project.<br>Entrants outside Taiwan pay the <b>USD</b> amount; entrants in Taiwan pay the <b>NT$</b> amount, converted at a fixed rate of <b>US$1 = NT$32</b> for the whole 2026 programme.<br><span class="cjk">費用以每件計。海外參賽者支付美金金額；台灣參賽者支付新台幣金額，2026 年度固定以 US$1 = NT$32 換算。</span></p>
 
     <div class="pay">
       <div class="callbox">
@@ -521,7 +522,7 @@
             <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
             <dt>Account No.</dt><dd><span class="mono">057001080867</span></dd>
           </dl>
-          <p class="acct-note">New Taiwan Dollar account — <b>this is the account for entrants in Taiwan</b>, for domestic transfers only. As the fees above are set in USD, please email <a href="mailto:aiataipeiaward@gmail.com">aiataipeiaward@gmail.com</a> to confirm the NT$ amount before remitting.</p>
+          <p class="acct-note">New Taiwan Dollar account — <b>this is the account for entrants in Taiwan</b>, for domestic transfers only. Remit the <b>NT$ amount shown in the fee table above</b>; no conversion is needed on your side.</p>
         </div>
 
         <p class="acct-warn"><b>Note</b> — the two accounts are not interchangeable. New Taiwan Dollars cannot be remitted to the foreign-currency (USD) account, and USD wires cannot be sent to the NT$ account.<br><span class="cjk">請注意：兩個帳號不可互用。新台幣無法匯入外幣（美金）帳戶，美金電匯亦無法匯入新台幣帳戶。</span></p>
