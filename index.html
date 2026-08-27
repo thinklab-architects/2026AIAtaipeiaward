@@ -182,6 +182,10 @@
   .pay{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
   @media(max-width:640px){.cats,.pay{grid-template-columns:1fr}}
   .pay .callbox strong{color:var(--ink)}
+  .pay-who{list-style:none;margin:12px 0 16px}
+  .pay-who li{position:relative;padding:10px 0 10px 26px;border-bottom:1px dashed var(--line);font-size:15px;color:var(--graphite)}
+  .pay-who li::before{content:"";position:absolute;left:0;top:19px;width:9px;height:9px;background:var(--aia-red)}
+  .pay-who .cjk{color:var(--stone);font-size:14px}
   .acct{border:1px solid var(--line);padding:24px 26px;margin-top:22px}
   .acct-head{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .acct-head .cur{background:#272727;color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;padding:5px 12px}
@@ -490,10 +494,15 @@
     <div class="pay">
       <div class="callbox">
         <h3>Payment Method — Bank Transfer Only</h3>
-        <p style="margin:0">Entry fees are payable by <strong>bank transfer</strong>. Two accounts are held at the same branch — <strong>use the one that matches the currency you are sending</strong>. Please quote the payment reference <b>'AIATP Awards'</b> and keep the remittance receipt: it is required as your Proof of Entry Fee Payment (listed on the Submission Checklist, Appendix D).</p>
+        <p style="margin:0 0 6px">Entry fees are payable by <strong>bank transfer</strong>. Two accounts are held at the same branch — <strong>use the one for your location</strong>:</p>
+        <ul class="pay-who">
+          <li><b>Entrants in Taiwan</b> remit in <b>New Taiwan Dollars</b> to the <b>NT$ account</b>.<br><span class="cjk">台灣參賽者請以新台幣匯入下方「新台幣帳號」。</span></li>
+          <li><b>Entrants outside Taiwan</b> remit in <b>USD</b> to the <b>foreign-currency account</b>.<br><span class="cjk">海外參賽者請以美金匯入「外幣帳號」。</span></li>
+        </ul>
+        <p style="margin:0">Please quote the payment reference <b>'AIATP Awards'</b> and keep the remittance receipt: it is required as your Proof of Entry Fee Payment (listed on the Submission Checklist, Appendix D).</p>
 
         <div class="acct">
-          <div class="acct-head"><span class="cur">USD</span> From outside Taiwan · 海外匯款（美金）</div>
+          <div class="acct-head"><span class="cur">USD</span> For entrants outside Taiwan · 海外參賽者（美金）</div>
           <dl class="bank">
             <dt>SWIFT / BIC</dt><dd><span class="mono">LBOTTWTP057</span></dd>
             <dt>Bank</dt><dd><strong>Land Bank of Taiwan</strong> 臺灣土地銀行</dd>
@@ -505,14 +514,14 @@
         </div>
 
         <div class="acct">
-          <div class="acct-head"><span class="cur twd">TWD</span> Within Taiwan · 國內匯款（新台幣）</div>
+          <div class="acct-head"><span class="cur twd">TWD</span> For entrants in Taiwan · 台灣參賽者（新台幣）</div>
           <dl class="bank">
             <dt>Bank Code</dt><dd><span class="mono">005</span> <span style="color:var(--stone);font-size:13px">Land Bank of Taiwan 臺灣土地銀行</span></dd>
             <dt>Branch</dt><dd><strong>Jenai Branch</strong> 仁愛分行</dd>
             <dt>Account Name</dt><dd><span class="mono">台灣 AIA TAIPEI 美國建築師協會</span></dd>
             <dt>Account No.</dt><dd><span class="mono">057001080867</span></dd>
           </dl>
-          <p class="acct-note">New Taiwan Dollar account, for domestic transfers only. Please email <a href="mailto:aiataipeiaward@gmail.com">aiataipeiaward@gmail.com</a> to confirm the NT$ amount before remitting, as the fees above are set in USD.</p>
+          <p class="acct-note">New Taiwan Dollar account — <b>this is the account for entrants in Taiwan</b>, for domestic transfers only. As the fees above are set in USD, please email <a href="mailto:aiataipeiaward@gmail.com">aiataipeiaward@gmail.com</a> to confirm the NT$ amount before remitting.</p>
         </div>
 
         <p class="acct-warn"><b>Note</b> — the two accounts are not interchangeable. New Taiwan Dollars cannot be remitted to the foreign-currency (USD) account, and USD wires cannot be sent to the NT$ account.<br><span class="cjk">請注意：兩個帳號不可互用。新台幣無法匯入外幣（美金）帳戶，美金電匯亦無法匯入新台幣帳戶。</span></p>
