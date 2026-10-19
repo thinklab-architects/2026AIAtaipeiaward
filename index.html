@@ -108,14 +108,14 @@
   @media(max-width:760px){.elig-grid{grid-template-columns:1fr}}
 
   /* dates */
-  .dates{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;border:1px solid var(--line)}
+  .dates{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;border:1px solid var(--line)}
   .date{padding:26px 22px;border-right:1px solid var(--line)}
   .date:last-child{border-right:none}
   .date .d-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:10px}
   .date .d-val{font-size:18px;font-weight:400;color:var(--ink);line-height:1.3}
   /* Submission-deadline cell: plain white, no highlight */
   .date.hl{background:#fff}
-  @media(max-width:760px){.dates{grid-template-columns:1fr 1fr}.date:nth-child(2){border-right:none}}
+  @media(max-width:760px){.dates{grid-template-columns:1fr}.date{border-right:none;border-bottom:1px solid var(--line)}.date:last-child{border-bottom:none}}
 
   /* submission */
   .req-cols{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin-top:26px}
@@ -414,10 +414,6 @@
         <div class="d-val">Early November 2026</div>
       </div>
       <div class="date">
-        <div class="d-label">Results Announcement</div>
-        <div class="d-val">Sunday, 8 November 2026</div>
-      </div>
-      <div class="date">
         <div class="d-label">Awards Ceremony</div>
         <div class="d-val">Saturday, 14 November 2026<br><span style="font-size:13px;font-weight:600">in Taipei</span></div>
       </div>
@@ -516,7 +512,6 @@
           <tr class="ms-head"><th scope="colgroup" colspan="4">Program Milestones</th></tr>
           <tr class="ms"><th scope="row">Submission Deadline</th><td class="period" colspan="3"><b>Saturday, 31 October 2026</b> — 11:59 EDT (US Eastern) / 23:59 CST (Taipei)</td></tr>
           <tr class="ms"><th scope="row">Jury Deliberation</th><td class="period" colspan="3">Early November 2026</td></tr>
-          <tr class="ms"><th scope="row">Results Announcement</th><td class="period" colspan="3">Sunday, 8 November 2026</td></tr>
           <tr class="ms"><th scope="row">Awards Ceremony</th><td class="period" colspan="3">Saturday, 14 November 2026 — Taipei</td></tr>
         </tbody>
       </table>
