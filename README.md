@@ -18,6 +18,7 @@ assets/
   sponsor_kohler.png                                sponsor logos 贊助商 logo
   sponsor_tatler.png
   sponsor_twarch.png
+  sponsor_sherwin-williams.png
 downloads/
   2026-AIA-Taipei-AWARDS_Appendix-Forms-A-E.docx    entry forms, linked from the page
 README.md                                           this file 本說明
