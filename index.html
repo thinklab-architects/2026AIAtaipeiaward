@@ -179,6 +179,26 @@
   }
   .fee-table .ms th{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
   .fee-table .ms td.period{white-space:normal}
+  /* phases run across the top, latest first; entrant categories run down the side */
+  .fee-table.matrix thead th .tier-tag{margin:0 auto 7px}
+  .fee-table .ph-period{display:block;font-size:12px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--graphite)}
+  .fee-table.matrix tbody:not(.ms-body) th{white-space:normal;font-weight:600;color:var(--ink);font-size:14px;line-height:1.35}
+  .fee-table.matrix tbody th .col-sub{display:block;font-size:12px;font-weight:400;color:var(--stone);margin-top:3px}
+  @media(max-width:640px){
+    .fee-table{min-width:0}
+    .fee-table th,.fee-table td{padding:12px 6px}
+    .fee-table thead th{font-size:11px;letter-spacing:.5px}
+    .fee-table.matrix thead th:first-child{width:30%}
+    .fee-table.matrix thead th .tier-tag{font-size:9px;letter-spacing:.5px;padding:3px 5px;white-space:nowrap}
+    .fee-table .ph-period{font-size:10px;letter-spacing:0;white-space:normal}
+    .fee-table.matrix tbody:not(.ms-body) th{font-size:12px;padding-left:10px}
+    .fee-table.matrix tbody th .col-sub{font-size:10px}
+    .fee-table .amt{font-size:17px}
+    .fee-table .amt-twd{font-size:11px}
+    .fee-table .ms th{white-space:normal;font-size:12px;padding-left:10px}
+    .fee-table .ms td.period{font-size:13px;padding-left:8px}
+    .fee-table .ms-body .ms-head th{padding:10px}
+  }
   @media(max-width:700px){.tl-seg{font-size:10px;letter-spacing:1px;padding:9px 6px}.tl-mark{font-size:10px;letter-spacing:0}}
   .pay{display:grid;grid-template-columns:1fr;gap:20px;margin-top:28px}
   @media(max-width:640px){.cats,.pay{grid-template-columns:1fr}}
@@ -436,62 +456,58 @@
     <h2 class="title">Fee &amp; Timeline</h2>
     <p class="lead">The entry fee, per project, is tiered by the date payment is remitted. Enter early to receive the reduced rate.</p>
 
-    <!-- Visual timeline rail -->
+    <!-- Visual timeline rail (latest phase first, matching the table) -->
     <div class="tl-rail" aria-hidden="true">
       <div class="tl-track">
-        <div class="tl-seg s1"><span>Phase 1 · Half Price</span></div>
-        <div class="tl-seg s2"><span>Phase 2 · 20% Off</span></div>
         <div class="tl-seg s3"><span>Phase 3 · Full Price</span></div>
+        <div class="tl-seg s2"><span>Phase 2 · 20% Off</span></div>
+        <div class="tl-seg s1"><span>Phase 1 · Half Price</span></div>
       </div>
       <div class="tl-marks">
-        <div class="tl-mark"><i></i>Entries open</div>
-        <div class="tl-mark"><i></i>from 1 Oct 2026</div>
         <div class="tl-mark"><i></i>19–31 Oct 2026</div>
+        <div class="tl-mark"><i></i>from 1 Oct 2026</div>
+        <div class="tl-mark"><i></i>Entries open</div>
       </div>
     </div>
 
     <!-- Fee × Timeline matrix -->
     <div class="fee-table-wrap">
       <table class="fee-table matrix">
-        <caption class="sr-only">Fee and timeline matrix: entry fees per project by payment phase and entrant category, in USD and New Taiwan Dollars, followed by program milestones</caption>
+        <caption class="sr-only">Fee and timeline matrix: entry fees per project by entrant category and payment phase (latest phase first), in USD and New Taiwan Dollars, followed by program milestones</caption>
         <thead>
           <tr>
-            <th scope="col">Phase</th>
-            <th scope="col">Period</th>
-            <th scope="col">AIA Taipei Architect Member</th>
-            <th scope="col">Other AIA Member</th>
-            <th scope="col">International Licensed Architect<span class="col-sub">non-AIA member</span></th>
+            <th scope="col">Entrant</th>
+            <th scope="col"><span class="tier-tag plain">Full Price</span><span class="ph-period">19 – 31 Oct 2026</span></th>
+            <th scope="col"><span class="tier-tag alt">20% Off</span><span class="ph-period">1 – 18 Oct 2026</span></th>
+            <th scope="col"><span class="tier-tag">Half Price</span><span class="ph-period">On or before 30 Sep 2026</span></th>
           </tr>
         </thead>
         <tbody>
-          <tr class="tier-early">
-            <th scope="row"><span class="tier-tag">Half Price</span></th>
-            <td class="period">On or before <b>30 Sep 2026</b></td>
-            <td><span class="amt">US$75</span><span class="amt-twd">NT$2,400</span></td>
-            <td><span class="amt">US$100</span><span class="amt-twd">NT$3,200</span></td>
-            <td><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
-          </tr>
           <tr>
-            <th scope="row"><span class="tier-tag alt">20% Off</span></th>
-            <td class="period"><b>1 Oct – 18 Oct 2026</b></td>
+            <th scope="row">AIA Taipei Architect Member</th>
+            <td><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
             <td><span class="amt">US$120</span><span class="amt-twd">NT$3,840</span></td>
-            <td><span class="amt">US$160</span><span class="amt-twd">NT$5,120</span></td>
-            <td><span class="amt">US$240</span><span class="amt-twd">NT$7,680</span></td>
+            <td class="tier-early"><span class="amt">US$75</span><span class="amt-twd">NT$2,400</span></td>
           </tr>
           <tr>
-            <th scope="row"><span class="tier-tag plain">Full Price</span></th>
-            <td class="period"><b>19 Oct – 31 Oct 2026</b></td>
-            <td><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
+            <th scope="row">Other AIA Member</th>
             <td><span class="amt">US$200</span><span class="amt-twd">NT$6,400</span></td>
+            <td><span class="amt">US$160</span><span class="amt-twd">NT$5,120</span></td>
+            <td class="tier-early"><span class="amt">US$100</span><span class="amt-twd">NT$3,200</span></td>
+          </tr>
+          <tr>
+            <th scope="row">International Licensed Architect<span class="col-sub">non-AIA member</span></th>
             <td><span class="amt">US$300</span><span class="amt-twd">NT$9,600</span></td>
+            <td><span class="amt">US$240</span><span class="amt-twd">NT$7,680</span></td>
+            <td class="tier-early"><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
           </tr>
         </tbody>
         <tbody class="ms-body">
-          <tr class="ms-head"><th scope="colgroup" colspan="5">Program Milestones</th></tr>
-          <tr class="ms"><th scope="row">Submission Deadline</th><td class="period" colspan="4"><b>Saturday, 31 October 2026</b> — 11:59 EDT (US Eastern) / 23:59 CST (Taipei)</td></tr>
-          <tr class="ms"><th scope="row">Jury Deliberation</th><td class="period" colspan="4">Early November 2026</td></tr>
-          <tr class="ms"><th scope="row">Results Announcement</th><td class="period" colspan="4">Sunday, 8 November 2026</td></tr>
-          <tr class="ms"><th scope="row">Awards Ceremony</th><td class="period" colspan="4">Saturday, 14 November 2026 — Taipei</td></tr>
+          <tr class="ms-head"><th scope="colgroup" colspan="4">Program Milestones</th></tr>
+          <tr class="ms"><th scope="row">Submission Deadline</th><td class="period" colspan="3"><b>Saturday, 31 October 2026</b> — 11:59 EDT (US Eastern) / 23:59 CST (Taipei)</td></tr>
+          <tr class="ms"><th scope="row">Jury Deliberation</th><td class="period" colspan="3">Early November 2026</td></tr>
+          <tr class="ms"><th scope="row">Results Announcement</th><td class="period" colspan="3">Sunday, 8 November 2026</td></tr>
+          <tr class="ms"><th scope="row">Awards Ceremony</th><td class="period" colspan="3">Saturday, 14 November 2026 — Taipei</td></tr>
         </tbody>
       </table>
     </div>
