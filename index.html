@@ -179,6 +179,16 @@
   }
   .fee-table .ms th{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
   .fee-table .ms td.period{white-space:normal}
+  /* phases that have closed are shown in light grey and struck through */
+  .tl-seg.past{background:#e4e2dc;color:#a9a59b}
+  .tl-mark.past{color:#c9c5ba}
+  .fee-table th.past .tier-tag{background:#e4e2dc;color:#a9a59b}
+  .fee-table th.past .ph-period,
+  .fee-table td.past .amt,
+  .fee-table td.past .amt-twd{color:#c9c5ba}
+  .tl-seg.past span,.tl-mark.past,
+  .fee-table th.past .tier-tag,.fee-table th.past .ph-period,
+  .fee-table td.past .amt,.fee-table td.past .amt-twd{text-decoration:line-through}
   /* phases run across the top, latest first; entrant categories run down the side */
   .fee-table.matrix thead th .tier-tag{margin:0 auto 7px}
   .fee-table .ph-period{display:block;font-size:12px;font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--graphite)}
@@ -460,13 +470,13 @@
     <div class="tl-rail" aria-hidden="true">
       <div class="tl-track">
         <div class="tl-seg s3"><span>Phase 3 · Full Price</span></div>
-        <div class="tl-seg s2"><span>Phase 2 · 20% Off</span></div>
-        <div class="tl-seg s1"><span>Phase 1 · Half Price</span></div>
+        <div class="tl-seg s2 past"><span>Phase 2 · 20% Off</span></div>
+        <div class="tl-seg s1 past"><span>Phase 1 · Half Price</span></div>
       </div>
       <div class="tl-marks">
         <div class="tl-mark"><i></i>19–31 Oct 2026</div>
-        <div class="tl-mark"><i></i>from 1 Oct 2026</div>
-        <div class="tl-mark"><i></i>Entries open</div>
+        <div class="tl-mark past"><i></i>from 1 Oct 2026</div>
+        <div class="tl-mark past"><i></i>Entries open</div>
       </div>
     </div>
 
@@ -478,28 +488,28 @@
           <tr>
             <th scope="col">Entrant</th>
             <th scope="col"><span class="tier-tag plain">Full Price</span><span class="ph-period">19 – 31 Oct 2026</span></th>
-            <th scope="col"><span class="tier-tag alt">20% Off</span><span class="ph-period">1 – 18 Oct 2026</span></th>
-            <th scope="col"><span class="tier-tag">Half Price</span><span class="ph-period">On or before 30 Sep 2026</span></th>
+            <th scope="col" class="past"><span class="tier-tag alt">20% Off</span><span class="ph-period">1 – 18 Oct 2026</span></th>
+            <th scope="col" class="past"><span class="tier-tag">Half Price</span><span class="ph-period">On or before 30 Sep 2026</span></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">AIA Taipei Architect Member</th>
             <td><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
-            <td><span class="amt">US$120</span><span class="amt-twd">NT$3,840</span></td>
-            <td class="tier-early"><span class="amt">US$75</span><span class="amt-twd">NT$2,400</span></td>
+            <td class="past"><span class="amt">US$120</span><span class="amt-twd">NT$3,840</span></td>
+            <td class="tier-early past"><span class="amt">US$75</span><span class="amt-twd">NT$2,400</span></td>
           </tr>
           <tr>
             <th scope="row">Other AIA Member</th>
             <td><span class="amt">US$200</span><span class="amt-twd">NT$6,400</span></td>
-            <td><span class="amt">US$160</span><span class="amt-twd">NT$5,120</span></td>
-            <td class="tier-early"><span class="amt">US$100</span><span class="amt-twd">NT$3,200</span></td>
+            <td class="past"><span class="amt">US$160</span><span class="amt-twd">NT$5,120</span></td>
+            <td class="tier-early past"><span class="amt">US$100</span><span class="amt-twd">NT$3,200</span></td>
           </tr>
           <tr>
             <th scope="row">International Licensed Architect<span class="col-sub">non-AIA member</span></th>
             <td><span class="amt">US$300</span><span class="amt-twd">NT$9,600</span></td>
-            <td><span class="amt">US$240</span><span class="amt-twd">NT$7,680</span></td>
-            <td class="tier-early"><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
+            <td class="past"><span class="amt">US$240</span><span class="amt-twd">NT$7,680</span></td>
+            <td class="tier-early past"><span class="amt">US$150</span><span class="amt-twd">NT$4,800</span></td>
           </tr>
         </tbody>
         <tbody class="ms-body">
