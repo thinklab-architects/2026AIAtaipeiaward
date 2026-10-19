@@ -15,6 +15,9 @@ deliberately so the page can be dropped inside an existing site template.
 index.html                                          the page 網頁本體
 assets/
   poster.jpg                                        the poster shown at the top 頁首海報
+  sponsor_kohler.png                                sponsor logos 贊助商 logo
+  sponsor_tatler.png
+  sponsor_twarch.png
 downloads/
   2026-AIA-Taipei-AWARDS_Appendix-Forms-A-E.docx    entry forms, linked from the page
 README.md                                           this file 本說明
