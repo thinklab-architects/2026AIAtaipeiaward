@@ -226,10 +226,15 @@
 
   /* sponsors */
   .sponsors{text-align:center}
-  .sp-soon{
-    margin:34px auto 0;border:1px dashed var(--line);padding:44px 24px;max-width:620px;
-    font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--stone);
+  .sp-logos{
+    margin:34px auto 0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+    gap:40px 64px;
   }
+  /* every logo is trimmed to its artwork, so one height makes them all equal */
+  .sp-logos img{height:60px;width:auto;display:block}
+  /* KOHLER is a wide, heavy wordmark: set it a touch smaller so it doesn't dominate */
+  .sp-logos img.sp-wide{height:48px}
+  @media (max-width:600px){ .sp-logos{gap:28px 40px} .sp-logos img{height:44px} .sp-logos img.sp-wide{height:35px} }
 
 </style>
 </head>
@@ -653,10 +658,11 @@
   <section class="block sponsors" id="sponsors">
     <div class="kicker">With thanks</div>
     <h2 class="title" style="display:inline-block">Sponsors</h2>
-    <div class="sp-soon">Coming soon</div>
-    <p style="margin:18px auto 0;max-width:620px;color:var(--stone);font-size:15px">
-      Sponsorship opportunities for the 2026 AIA Taipei Design Awards will be announced shortly.
-    </p>
+    <div class="sp-logos">
+      <img class="sp-wide" src="assets/sponsor_kohler.png" alt="KOHLER">
+      <img src="assets/sponsor_tatler.png" alt="Tatler">
+      <img src="assets/sponsor_sponsor3.png" alt="Sponsor">
+    </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
